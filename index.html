@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        <style>@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap');
+        * {
+            padding: 0%;
+            margin: 0%;
+            font-family: 'League Spartan', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            background-color: #e3f9ff;
+            margin: 0%;
+            color: #3a4452;
+            padding: 10px;
+        }
+
+        p {
+            background-color: #e3f9ff;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 90vh;
+            background: #e3f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background-color: #3a4452;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .calculator form input {
+            width: 60px;
+            height: 60px;
+            border: 0;
+            outline: 0;
+            box-shadow: -8px -5px 5px rgba(255, 255, 255, 0.1), 1px 1px 15px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            background: transparent;
+            transition: all ease 0.3s;
+            color: white;
+        }
+
+        .calculator form input[type=button]:hover {
+            scale: 1.03;
+            box-shadow: -8px -5px 10px rgba(255, 255, 255, 0.1), 3px 3px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form .display {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+
+        form .display input {
+            width: 100%;
+            box-shadow: none;
+            float: 1;
+            text-align: right;
+            font-size: 25px;
+        }
+
+        form input.equal {
+            width: 145px;
+        }
+
+        form input.col {
+            color: #33ffd8;
+        }
+
+        form input.red {
+            color: red;
+        }
+
+        @media (max-width:390px) {
+            .calculator {
+                padding: 10px;
+            }
+            .calculator form input {
+                width: 55px;
+                height: 55px;
+                margin: 8px;
+            }
+            form input.equal {
+                width: 130px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:332px) {
+            .calculator {
+                padding: 5px;
+            }
+            .calculator form input {
+                width: 50px;
+                height: 50px;
+                margin: 8px;
+            }
+            form input.equal {
+                width: 120px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:302px) {
+            .calculator {
+                padding: 5px;
+            }
+            .calculator form input {
+                width: 45px;
+                height: 45px;
+                margin: 8px;
+            }
+            form input.equal {
+                width: 110px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:282px) {
+            .calculator {
+                padding: 5px;
+            }
+            .calculator form input {
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
+                margin: 8px;
+            }
+            form input.equal {
+                width: 100px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:262px) {
+            .calculator {
+                padding: 5px;
+            }
+            .calculator form input {
+                width: 35px;
+                height: 35px;
+                margin: 6px;
+                font-size: 12px;
+            }
+            form input.equal {
+                width: 87px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:227px) {
+            .calculator {
+                padding: 6px;
+            }
+            .calculator form input {
+                width: 30px;
+                height: 30px;
+                margin: 6px;
+                font-size: 12px;
+            }
+            form input.equal {
+                width: 77px;
+            }
+            form .display input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>calculator</h1>
+    <div class="container">
+        <div class="calculator">
+            <form action="" class="form">
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="C" onclick="display.value =''" class="col red">
+                    <input type="button" value="DE" class="col" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="%" onclick="display.value +='%'" class="col">
+                    <input type="button" value="/" onclick="display.value +='/'" class="col">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8" onclick="display.value +='8'">
+                    <input type="button" value="9" onclick="display.value +='9'">
+                    <input type="button" value="X" onclick="display.value +='*'" class="col">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4'">
+                    <input type="button" value="5" onclick="display.value +='5'">
+                    <input type="button" value="6" onclick="display.value +='6'">
+                    <input type="button" value="-" onclick="display.value +='-'" class="col">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1'">
+                    <input type="button" value="2" onclick="display.value +='2'">
+                    <input type="button" value="3" onclick="display.value +='3'">
+                    <input type="button" value="+" onclick="display.value +='+'" class="col">
+                </div>
+                <div>
+                    <input type="button" value="." onclick="display.value +='.'">
+                    <input type="button" value="0" onclick="display.value +='0'">
+                    <input type="button" value="=" class="equal col" onclick="display.value = eval(display.value)">
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <p>Made by Tanmay</p>
+    <script>
+    </script>
+</body>
+
+</html>
