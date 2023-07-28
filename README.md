@@ -1,9 +1,9 @@
 # Build-Javascript-Calculator [Click here ](https://sparkly-lolly-31b425.netlify.app/)
-## Functionality of the projects 
+## Features of the project.
 - Responsive
 - Calculation 
 
-## What we used in this project
+## What did we use in this project?
 - HTML
 - CSS
 - Javascript
